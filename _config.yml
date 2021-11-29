@@ -2,8 +2,8 @@
 name: "/sol/"
 title: "slice of life"
 description: ".life, plate and palate."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets/images/logo2.png'
+favicon: 'assets/images/logo2.png'
 baseurl: /sol
 disqus: 'robeeid'
 include: ["_pages"]
