@@ -4,7 +4,6 @@ title:  "Rumah Kopi Tapi Sapi"
 author: rob
 categories: [ Kuliner ]
 image: "https://pbs.twimg.com/media/FFUpYb1VEAEsw8n?format=jpg&name=small"
-featured: true
 ---
 
 Lokasi Pasmod BSD.
