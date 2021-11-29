@@ -5,9 +5,7 @@ description: ".life, plate and palate."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /sol
-google_analytics: ''
 disqus: 'robeeid'
-mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
 
