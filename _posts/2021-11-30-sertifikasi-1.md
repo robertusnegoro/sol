@@ -2,7 +2,7 @@
 layout: post
 title:  "Budaya"
 author: rob
-categories: [ Kuliner ]
+categories: [ Celoteh ]
 image: assets/images/img1.png
 ---
 
