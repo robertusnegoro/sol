@@ -4,7 +4,7 @@ title:  "Mie Kocok Bandung Pengadilan"
 author: rob
 categories: [ Kuliner ]
 image: "https://pbs.twimg.com/media/FDpUo2OVgAAKBBz?format=jpg&name=small"
-featured: true
+featured: false
 ---
 
 Lokasi Pasmod BSD.
