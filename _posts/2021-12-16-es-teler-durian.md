@@ -4,7 +4,6 @@ title:  "Es Teler Durian Muda Mudi Bang Fe`i"
 author: rob
 categories: [ Kuliner ]
 image: "assets/images/img3.png"
-featured: true
 ---
 
 Kedai es teler legendaris yang ternyata sudah berumur nyaris 20 tahun. Lokasinya ada di daerah Batu Aji. Daerah yang panas dan gersang ini, diberkahi Tuhan dengan menurunkan Bang Fe`i ke daerah mereka.
