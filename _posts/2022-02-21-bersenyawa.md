@@ -3,7 +3,7 @@ layout: post
 title:  "Bersenyawa Coffee"
 author: rob
 categories: [ Kuliner ]
-image: "assets/images/img4.jpeg"]
+image: "assets/images/img4.jpeg"
 featured: true
 ---
 
