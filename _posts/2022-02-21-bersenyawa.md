@@ -3,7 +3,8 @@ layout: post
 title:  "Bersenyawa Coffee"
 author: rob
 categories: [ Kuliner ]
-image: "assets/images/img4.jpeg"
+image: "assets/images/img4.jpeg"]
+featured: true
 ---
 
 Tempat ngopi ke kinian ini bisa dicari sendiri di Google Maps dengan kata kunci "Bersenyawa Coffee".
