@@ -4,7 +4,6 @@ title:  "Menjaga Kewarasan"
 author: rob
 categories: [ Celoteh ]
 image: "https://images.unsplash.com/photo-1619982339591-4bd3e8f4d34e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80"
-featured: false
 ---
 
 Dalam beberapa hari terakhir ini, tantangan terbesar untuk kita sebagai warga negara, adalah menjaga pikiran kita sendiri untuk tetap sadar dan waras. Banyak sekali isu yang sebenarnya tidak menyangkut harkat masyarakat secara langsung, namun karena ini adalah era pengadilan moral tengah berlangsung, kita diseret-seret untuk menonton, mengikuti dan mengomentari segala macam urusan tersebut. Mulai dari kasus di institusi pengayom, penembakan fauna oleh abdi negara hingga isu remeh temeh soal seorang suami founder ojek online yang tengah mencuci piring. 

@@ -4,7 +4,7 @@ title:  "Fundamental"
 author: rob
 categories: [ Celoteh ]
 image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80"
-featured: false
+featured: true
 ---
 
 Dalam satu bulan terakhir ini, saya sedang mempelajari cara menganalisa "fundamental" sebuah perusahaan, sebelum saya berinvestasi kepada mereka. Memang tak ada jalan pintas, baik analisa keuangan secara menyeluruh, maupun analisa saham teknikal - keduanya sama - sama sulit dan membutuhkan waktu untuk mendapatkan hasil yang akurat dan dapat dipercaya untuk bahan pengambilan keputusan. Saya mengikuti program mentorship yang diadakan salah satu pakar analisis fundamental yang sudah cukup baik reputasinya. 

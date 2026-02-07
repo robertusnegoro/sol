@@ -1,4 +1,38 @@
+# OS
 .DS_Store
-vendor/bundle
-.sass-cache
-.jekyll-cache
+Thumbs.db
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler
+vendor/bundle/
+.bundle/
+*.gem
+*.rbc
+Gemfile.lock.bak
+
+# Logs and temp
+*.log
+log/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE / Editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Env (if you add .env for API keys etc.)
+.env
+.env.local
+.env.*.local

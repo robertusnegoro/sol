@@ -1,0 +1,3 @@
+{% assign words = include.content | default: content | number_of_words %}
+{% assign mins = words | divided_by: 200 | at_least: 1 %}
+<span class="reading-time" aria-label="Estimated read time">{{ mins }} min read</span>

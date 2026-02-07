@@ -68,7 +68,7 @@ post_class: post-template
                     {% if page.beforetoc %}
                         <p><em>{{page.beforetoc}}</em></p>
                     {% endif %}
-                    <div class="toc mt-4 mb-4 lead">
+                    <div class="toc mt-4 mb-4 lead sticky-toc">
                         <h3 class="font-weight-bold">Summary</h3>
                         {% include toc.html html=content %}
                     </div>
@@ -84,12 +84,15 @@ post_class: post-template
             </div>
             {% endif %}
 
-            <!-- Post Date -->
-            <p>
+            <!-- Post Date and Reading Time -->
+            <p class="post-meta">
             <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>
+                <span class="post-meta-sep"> · </span>
+                {% include reading-time.html content=content %}
                 {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+                <span class="post-meta-sep"> · </span>
+                Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>
                 {% endif %}
                 </small>
             </p>
@@ -120,6 +123,43 @@ post_class: post-template
             </div>
             <!-- End Tags -->
 
+            <!-- Related Posts (same category or recent) -->
+            {% assign first_cat = page.categories | first %}
+            {% if first_cat %}
+              {% assign related_posts = site.categories[first_cat] | where_exp: "p", "p.url != page.url" %}
+            {% else %}
+              {% assign related_posts = site.posts | where_exp: "p", "p.url != page.url" %}
+            {% endif %}
+            {% assign related_size = related_posts | size %}
+            {% if related_size > 0 %}
+            <div class="related-posts mt-5">
+                <h3 class="font-weight-bold mb-3">Related</h3>
+                <div class="row listrecent">
+                    {% for p in related_posts limit: 4 %}
+                    <div class="col-lg-4 col-md-6 mb-30px card-group">
+                        <div class="card h-100">
+                            <div class="maxthumb">
+                                <a href="{{ site.baseurl }}{{ p.url }}">
+                                    {% if p.image %}
+                                    <img class="img-fluid" src="{% if p.image contains '://' %}{{ p.image }}{% else %}{{ site.baseurl }}/{{ p.image }}{% endif %}" alt="{{ p.title }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></h2>
+                                <h4 class="card-text">{{ p.excerpt | strip_html | truncatewords: 20 }}</h4>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <span class="post-date">{{ p.date | date_to_string }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <!-- End Related -->
+
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
             {% if page.previous.url %}
@@ -130,7 +170,7 @@ post_class: post-template
             {% endif %}
             <div class="clearfix"></div>
             </div>
-            <!-- End Categories -->
+            <!-- End Prev/Next -->
 
         </div>
         <!-- End Post -->
