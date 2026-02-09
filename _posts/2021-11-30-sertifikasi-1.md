@@ -3,7 +3,7 @@ layout: post
 title:  "Budaya"
 author: rob
 categories: [ Celoteh ]
-image: assets/images/img1.png
+image: /assets/images/img1.png
 ---
 
 Sebuah pertanyaan terbuka alias open ended question. <br>

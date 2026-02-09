@@ -1,0 +1,38 @@
+<header class="site-header" role="banner">
+  <div class="site-header__inner wrapper">
+    <a class="site-header__brand" href="{{ '/' | prepend: site.baseurl }}" rel="home">
+      {% if site.logo %}
+      <img class="site-header__logo" src="{{ site.logo | prepend: site.baseurl }}"
+        alt="{{ site.name | default: site.title }}" width="32" height="32">
+      {% endif %}
+      <span class="site-header__name">{{ site.name | default: site.title }}</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Main">
+      <a class="site-header__link" href="{{ '/' | prepend: site.baseurl }}">Home</a>
+      {% for p in site.pages %}
+      {% if p.title and p.url != '/' and p.url != '/index.html' %}
+      <a class="site-header__link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+      {% endif %}
+      {% endfor %}
+      {% assign categories_list = site.categories | sort %}
+      {% if categories_list.size > 0 %}
+      <div class="site-header__dropdown">
+        <button class="site-header__link site-header__link--dropdown" aria-expanded="false" aria-haspopup="true"
+          type="button">Categories</button>
+        <ul class="site-header__dropdown-menu" role="menu">
+          {% for category in categories_list %}
+          {% assign category_name = category[0] %}
+          {% assign category_slug = category_name | slugify %}
+          {% assign category_url = '/category/' | append: category_slug | prepend: site.baseurl | append: '/' %}
+          <li role="none">
+            <a class="site-header__dropdown-link" href="{{ category_url }}" role="menuitem">
+              {{ category_name }} ({{ category[1].size }})
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </nav>
+  </div>
+</header>

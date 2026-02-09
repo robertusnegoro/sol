@@ -1,0 +1,20 @@
+{% if site.ads %}
+<aside class="ads" aria-label="Advertisement">
+  <div class="ads__inner wrapper">
+    <!-- Configure in _config.yml: ads_client, ads_slot -->
+    <!-- Example: Google AdSense -->
+    {% if site.ads_client and site.ads_slot %}
+    <div class="ads__unit">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="{{ site.ads_client }}"
+           data-ad-slot="{{ site.ads_slot }}"
+           data-ad-format="auto"></ins>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.ads_client }}" crossorigin="anonymous"></script>
+    </div>
+    {% else %}
+    <div class="ads__placeholder">Advertisement placeholder. Set ads_client and ads_slot in _config.yml for Google AdSense.</div>
+    {% endif %}
+  </div>
+</aside>
+{% endif %}

@@ -1,0 +1,28 @@
+{% assign author_id = include.author | default: page.author %}
+{% if author_id and site.data.authors[author_id] %}
+  {% assign a = site.data.authors[author_id] %}
+  {% if a.gravatar %}
+    {% if a.gravatar contains "https://" or a.gravatar contains "http://" %}
+      {% assign gravatar_src = a.gravatar %}
+    {% else %}
+      {% assign gravatar_src = a.gravatar | strip | prepend: "https://www.gravatar.com/avatar/" %}
+    {% endif %}
+  {% endif %}
+  <aside class="author-card" aria-label="Author">
+    {% if a.gravatar %}
+      <div class="author-card__avatar">
+        <img src="{{ gravatar_src }}" alt="" width="64" height="64" loading="lazy">
+      </div>
+    {% endif %}
+    <div class="author-card__body">
+      <span class="author-card__label">Author</span>
+      <p class="author-card__name">{{ a.display_name | default: a.name }}</p>
+      {% if a.description %}
+        <p class="author-card__description">{{ a.description }}</p>
+      {% endif %}
+      {% if a.twitter %}
+        <a href="https://twitter.com/{{ a.twitter }}" class="author-card__twitter" rel="noopener noreferrer">@{{ a.twitter }}</a>
+      {% endif %}
+    </div>
+  </aside>
+{% endif %}
