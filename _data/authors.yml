@@ -1,7 +1,7 @@
 # Authors: reference in post front matter with author: author_id
 # Keys: name, display_name, gravatar (Gravatar hash or full avatar URL), twitter, description
 
-default:
+rob:
   name: Robi Negoro
   display_name: Robi Negoro
   gravatar: "a72aebdcfead04e04b4012b29d303746"

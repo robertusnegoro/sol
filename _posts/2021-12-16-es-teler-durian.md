@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2021-12-16 12:00:00 +0000
 title:  "Es Teler Durian Muda Mudi Bang Fe`i"
 author: rob
 categories: [ Kuliner ]

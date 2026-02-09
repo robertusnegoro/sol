@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2021-11-30 12:00:00 +0000
 title:  "Budaya"
 author: rob
 categories: [ Celoteh ]
