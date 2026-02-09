@@ -1,61 +1,96 @@
-# Site
+# Jekyll Premium Blog Template
+# GitHub Pages compatible (Jekyll 3.10, Ruby 3.3.4)
+
+# --- Site identity ---
 name: "/sol/"
 title: "slice of life"
 description: ".life, plate and palate."
-logo: 'assets/images/logo2.png'
-favicon: 'assets/images/logo2.png'
-baseurl: /sol
-disqus: 'robeeid'
-include: ["_pages"]
+url: "" # e.g. https://yoursite.github.io
+baseurl: "/sol" # e.g. /blog for project pages
+
+# --- Assets ---
+logo: '/assets/images/logo2.png'
+favicon: '/assets/images/logo2.png'
+
+# --- Paths and build ---
 permalink: /:title/
+include: []
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - .git
+  - .gitignore
+  - .cursor
+  - .cursorignore
 
-# Authors
-authors:
-  rob:
-    name: Rob
-    display_name: Rob
-    gravatar: a72aebdcfead04e04b4012b29d303746
-    email: kontak@robee.id
-    web: https://www.robee.id
-    twitter: https://twitter.com/robinegoro
-    description: "kuliner adalah cabang olahraga"
+# --- Optional integrations (leave blank or false to disable) ---
+disqus_shortname: "robeeid" # e.g. your-shortname
+google_analytics: "" # e.g. G-XXXXXXXXXX
+ads: false
+# ads_client: ""   # e.g. ca-pub-XXXXXXXX
+# ads_slot: ""     # ad unit slot ID
 
-# Plugins
+# --- Plugins ---
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
-    
-# Archives
+  - jekyll-archives  # Uncomment for local/actions build; add gem to Gemfile
+
+# --- Pagination ---
+paginate: 6
+paginate_path: "/page:num/"
+
+# --- jekyll-archives (only when using jekyll-archives plugin) ---
 jekyll-archives:
   enabled:
     - categories
+    - tags
   layout: archive
   permalinks:
     category: '/category/:name/'
-    
-# Pagination 
-paginate: 6
-paginate_path: /page:num/
-    
-# Other
-markdown: kramdown
+    tag: '/tag/:name/'
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
 
+# --- Sass ---
+sass:
+  sass_dir: _sass
+
+# --- Markdown (Kramdown) ---
+markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    block:
-      line_numbers: true
+    block: { line_numbers: false }
+  auto_ids: true
+  toc_levels: 1..3
+  hard_wrap: false
 
-# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
-adsense: "disabled"
-adsense-data-ad-client: ""
-adsense-data-ad-slot: ""
+# --- jekyll-seo-tag uses title, description, logo from config ---
 
-# Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
+# --- Collections (optional _pages directory for about, contact, etc.) ---
+collections:
+  pages:
+    output: true
+    permalink: /:path/
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+# --- Defaults ---
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      image: ""
+      image_alt: ""
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: page

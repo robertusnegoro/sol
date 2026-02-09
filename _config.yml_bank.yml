@@ -1,0 +1,61 @@
+# Site
+name: "/sol/"
+title: "slice of life"
+description: ".life, plate and palate."
+logo: 'assets/images/logo2.png'
+favicon: 'assets/images/logo2.png'
+baseurl: /sol
+disqus: 'robeeid'
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  rob:
+    name: Rob
+    display_name: Rob
+    gravatar: a72aebdcfead04e04b4012b29d303746
+    email: kontak@robee.id
+    web: https://www.robee.id
+    twitter: https://twitter.com/robinegoro
+    description: "kuliner adalah cabang olahraga"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: ""
+adsense-data-ad-slot: ""
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]

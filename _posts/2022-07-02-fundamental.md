@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2022-07-02 12:00:00 +0000
 title:  "Fundamental"
 author: rob
 categories: [ Celoteh ]

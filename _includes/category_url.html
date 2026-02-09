@@ -1,0 +1,16 @@
+{% comment %}
+  Generate category archive URL
+  Usage: {% include category_url.html category="Development" %}
+  Returns: category_url variable with the archive URL
+{% endcomment %}
+{% assign category_url = nil %}
+{% for archive in site.archives %}
+  {% if archive.type == 'category' and archive.title == include.category %}
+    {% assign category_url = archive.url %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if category_url == nil %}
+  {% assign category_slug = include.category | slugify %}
+  {% assign category_url = '/category/' | append: category_slug | append: '/' %}
+{% endif %}
